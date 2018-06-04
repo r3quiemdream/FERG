@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>FERG</title>
+        <meta charset="UTF">
+        <meta name="author" content="Fernando Romero">
+        <meta name="description" content="Fernando's portfolio">
+        <meta name="copyright" content="Copyright 2018 by Fernando Romero, All rights reserved">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+        <link rel="icon" href="static/img/blk_sheep.png" />
+    </head>
+    <body>
+        <header id="layout-header">
+            <p>FERNANDO E. ROMERO GALVAN</p>
+                <nav>
+                    <a href="{{ url_for('index') }}" class="nav-links">About</a>
+                    <a href="{{ url_for('professionallife') }}" class="nav-links">Resume</a>
+                    <a href="{{ url_for('projects') }}" class="nav-links">Projects</a>
+                    <a href="{{ url_for('blog') }}" class="nav-links">Blog</a>
+                </nav>
+        </header>
+        <main id="layout-main">
+            {% block content %}
+            {% endblock %}
+        </main>
+        <footer id="layout-footer">
+            <a href="https://github.com/r3quiemdream/FERG"><img src="../static/img/gh.png" alt="git" class="social-icons"></a>
+            <a href="https://www.facebook.com/profile.php?id=100009438201549"><img src="../static/img/fb.png" alt="fb" class="social-icons"></a>
+            <p>Copyright 2018 | Fernando Romero | All rights reserved</p>
+        </footer>
+    </body>
+</html>
