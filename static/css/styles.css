@@ -8,7 +8,12 @@ body {
     padding: 0;
 }
 
-.nav-links, :visited {
+a {
+    color: blue;
+    text-decoration: #42c2f4;
+}
+
+.nav-links, .nav-links:visited {
     display: inline-block;
     margin: 5px 30px;
     color: white;

@@ -1,4 +1,3 @@
-
 class Jobs(db.Model):
     uid = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(150))
@@ -14,8 +13,4 @@ class Jobs(db.Model):
 
     def __repr__(self):
         return self
-
-
-
-
 
