@@ -1,1 +1,1 @@
-web: gunicorn ferg:app
+web: gunicorn routes:app
