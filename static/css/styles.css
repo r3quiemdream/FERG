@@ -6,11 +6,12 @@ html {
 body {
     margin: 0;
     padding: 0;
+    height: 100%
 }
 
 a {
-    color: blue;
-    text-decoration: #42c2f4;
+    color: #42c2f4;
+    text-decoration: none;
 }
 
 .nav-links, .nav-links:visited {
@@ -23,10 +24,13 @@ a {
     color: #FF5733;
 }
 
+#container{
+    height: 100%;
+}
+
 #layout-header {
     text-align: center;
     color: rgb(255, 255, 255);
-    background-repeat: repeat;
 }
 
 #layout-header p {
@@ -37,12 +41,16 @@ a {
     /* background-color: red; */
     background-color: white;
     margin: 0 auto;
+    height: 100%;
 }
 
 #layout-footer {
     font-size: 14px;
     color: rgb(255, 255, 255);
-    background-repeat: repeat;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px;   /* Height of the footer */
 }
 
 #layout-footer p {
@@ -51,7 +59,11 @@ a {
 }
 
 #index {
-    width: 600px;
+    width: 1200px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom:60px;
 }
 
 #me {
