@@ -1,31 +1,7 @@
 from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
 import os
 
 app = Flask(__name__)
-
-DB_URL = "postgres+psycopg2://empenvsomaaxca:1be38b183f984b63d363707b8c9cc55734d339e5eaf3e7157f153a7531a08e2d@ec2-54-243-59-122.compute-1.amazonaws.com:5432/d5r632cf3ld71m"
-
-app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # silence the deprecation warning
-
-db = SQLAlchemy(app)
-
-class Jobs(db.Model):
-    uid = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(150))
-    jobstart = db.Column(db.Date())
-    jobend = db.Column(db.Date())
-    jobdescription = db.Column(db.String(500))
-
-    def __init__(self, title, jobstart, jobend, jobdescription):
-        self.title = title
-        self.jobstart = jobstart
-        self.jobend = jobend
-        self.jobdescription = jobdescription
-
-    def __repr__(self):
-        return self
 
 @app.route("/")
 def index(guest="Hoss"):
